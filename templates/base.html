@@ -1,0 +1,76 @@
+
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" href="data:,">  
+
+  <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="{{ url_for('index')}}"><a class="navbar-brand" href="#">
+        <svg x="0px" y="0px" width="154px" height="32px" viewBox="0 0 154 32">
+          <polyline fill="#336699"
+            points="55.945,31.976 55.945,23.988 67.962,31.976 95.91,31.976 71.929,15.998 74.817,14.222 101.384,31.976 111.715,31.976 111.712,0.087 95.86,0.087 95.86,8.089 83.932,0.087 67.764,0.087 55.945,8.089 55.945,0.024 39.894,10.741 39.894,21.229 29.333,14.166 50.655,0.024 23.975,0.024 0,15.998 23.975,31.976 55.945,31.976 ">
+          </polyline>
+          <polyline fill="#FFCC33"
+            points="116.67,32.069 140.645,16.092 116.67,0.117 130.023,0.117 154,16.092 130.023,32.069 116.67,32.069 ">
+          </polyline>
+        </svg>Manual Operacional</a>
+
+        <div class="container">
+          
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Máquina">
+              <button class="btn btn-primaryclear my-2 my-sm-0" type="submit">Pesquisa</button>
+            </form>  
+         
+
+        </div>   
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('admin_bp.index')}}">Voltar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('create')}}">Contribuir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('telegra')}}">Telegra</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-danger">{{ message }}</div>
+    {% endfor %}
+    {% block content %} {% endblock %}
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

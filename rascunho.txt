@@ -1,0 +1,33 @@
+export FLASK_APP=app.py
+export FLASK_DEBUG=1
+flask run
+---------------------------
+No Git bash activate para ativar
+
+source activate
+
+-------------------------------
+
+ deactivate   para desativar
+-------------------------------
+MUDAR INTERPRETADOR DO PYTHON PARA 
+O AMBIENTE VIRTUA, ERRO REQUESTS
+--------------------------------
+1827979086:AAEO0PKvV9tgCQKFoqbl0z67h_Z_Y5PXOtk
+-------------------------------------------
+ok----quando clicar no post não vazio botao de edit 
+# posts = conn.execute("SELECT * FROM posts a WHERE content =''").fetchall()
+---------------------------------------------
+ordenar post por ordem de data maior para menor
+-----------------------------------------------
+colocar botão de pesquisa no home
+---------------------------------------
+criar nova coluna para  verificar se esta foi 
+revisado check ok
+--------------------------------
+pip install -r requirements.txt
+instalar pacotes
+----------------------
+pip freeze > requirements.txt
+gerar arquivo dos pacotes
+
